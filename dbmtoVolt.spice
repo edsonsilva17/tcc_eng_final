@@ -1,0 +1,45 @@
+*******************
+**.subckt 
+
+
+******************
+.PARAM amp = 0.31622
+.CONTROL
+foreach myamp 3.16227766016838e-06 5.623413251903491e-06 1e-05 1.778279410038923e-05
++ 3.1622776601683795e-05 5.623413251903491e-05 0.0001 0.0001778279410038923 0.00031622776601683794 0.0005623413251903491
++ 0.001 0.0017782794100389228 0.00316227766016838 0.005623413251903492 0.01 0.01778279410038923
++ 0.0316227766016838 0.05623413251903492 0.1 0.1778279410038923 0.31622776601683794 0.31622776601683794
+  echo amp is $myamp
+  reset
+  alterparam amp = $myamp
+  save all
+  tran 0.01n 4.1u
+  meas tran dinrms RMS v(din) from=0 to=4.1u
+  meas tran dinmax MAX v(din) from=0 to=4.1u
+  meas tran domax MAX v(do) from=0 to=4.1u
+  meas tran dorms RMS v(do) from=0 to=4.1u
+  let cg = db(dorms/dinrms)
+  let cg_lin=dorms/dinrms
+  print dinrms dorms cg inrms cg_lin
+end
+
+
+ wrdata dinrms.csv tran1.dinrms tran2.dinrms tran3.dinrms tran4.dinrms tran5.dinrms tran6.dinrms
+ + tran7.dinrms tran8.dinrms tran9.dinrms tran10.dinrms tran11.dinrms tran12.dinrms tran13.dinrms
++   tran14.dinrms tran15.dinrms tran16.dinrms tran17.dinrms tran18.dinrms tran19.dinrms tran20.dinrms
+ + tran21.dinrms tran22.dinrms
+
+ wrdata dormsPos.csv tran1.dorms tran2.dorms tran3.dorms tran4.dorms tran5.dorms tran6.dorms
+ + tran7.dorms tran8.dorms tran9.dorms tran10.dorms tran11.dorms tran12.dorms tran13.dorms
+ + tran14.dorms tran15.dorms tran16.dorms tran17.dorms tran18.dorms tran19.dorms tran20.dorms
+ + tran21.dorms tran22.dorms
+
+.ENDC
+
+
+
+**** end user architecture code
+
+
+.GLOBAL GND
+.end
