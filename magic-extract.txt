@@ -1,0 +1,34 @@
+# LVS extraction
+extract do local
+extract all
+ext2spice lvs
+ext2spice
+
+# Full RC Extraction
+select top-1 cell
+flatten top-1_flat
+load top-1_flat
+cellname delete top-1
+cellname rename top-1_flat top-1
+select top-1 cell
+extract all
+ext2sim labels on
+ext2sim
+extresist tolerance 10
+extresist
+ext2spice lvs
+ext2spice cthresh 0
+ext2spice extresist on
+ext2spice -p .
+
+# Old Full RC Extraction
+extract do local
+extract all
+ext2sim labels on
+ext2sim
+extresist tolerance 10
+extresist
+ext2spice lvs
+ext2spice cthresh 0.01
+ext2spice extresist on
+ext2spice
