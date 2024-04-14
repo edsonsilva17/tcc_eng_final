@@ -1,0 +1,90 @@
+| units: 500000 tech: sky130A format: MIT
+x top_ibias x1.o w_13300_10340# x1.o l=200 w=600 x=12584 y=10817 sky130_fd_pr__pfet_g5v0d10v5
+x a_11070_13062# x2.x1.Vout l=4600 w=4600 x=9660 y=14130 sky130_fd_pr__cap_mim_m3_1
+x top_ibias x2.x1.Vout x1.o x1.o l=200 w=600 x=12584 y=11937 sky130_fd_pr__pfet_g5v0d10v5
+x top_ibias w_13300_10340# x1.o x1.o l=200 w=600 x=11294 y=10817 sky130_fd_pr__pfet_g5v0d10v5
+x top_ibias w_13300_10340# x1.o x1.o l=200 w=600 x=12326 y=10817 sky130_fd_pr__pfet_g5v0d10v5
+x top_ibias x1.o top_ibias x1.o l=200 w=600 x=10778 y=9687 sky130_fd_pr__pfet_g5v0d10v5
+x x2.x1.Vout x1.o top_out top_gnd l=100 w=2000 x=12095 y=19129 sky130_fd_pr__nfet_03v3_nvt
+x top_ibias x1.o x2.x1.Vout x1.o l=200 w=600 x=11294 y=11937 sky130_fd_pr__pfet_g5v0d10v5
+x top_ibias x1.o x2.x1.Vout x1.o l=200 w=600 x=12326 y=11937 sky130_fd_pr__pfet_g5v0d10v5
+x top_ibias x1.o w_13300_10340# x1.o l=200 w=600 x=11036 y=10817 sky130_fd_pr__pfet_g5v0d10v5
+x top_ibias top_ibias x1.o x1.o l=200 w=600 x=12584 y=9687 sky130_fd_pr__pfet_g5v0d10v5
+x top_ibias x1.o x2.x1.Vout x1.o l=200 w=600 x=9746 y=11937 sky130_fd_pr__pfet_g5v0d10v5
+x a_11070_13062# top_gnd x2.x1.Vout top_gnd l=200 w=600 x=11844 y=13150 sky130_fd_pr__nfet_g5v0d10v5
+x top_ibias x2.x1.Vout x1.o x1.o l=200 w=600 x=11036 y=11937 sky130_fd_pr__pfet_g5v0d10v5
+x top_ref w_13300_10340# a_11070_13062# w_13300_10340# l=100 w=400 x=13558 y=11557 sky130_fd_pr__pfet_g5v0d10v5
+x x1.o top_gnd l=6000 w=6000 x=2899 y=750 sky130_fd_pr__cap_mim_m3_1
+x w_100_16400# top_gnd w_100_16400# w_100_16400# l=70 w=1600 x=680 y=16619 sky130_fd_pr__pfet_01v8_lvt
+x x1.o top_gnd l=6000 w=6000 x=2899 y=13350 sky130_fd_pr__cap_mim_m3_1
+x a_11070_13062# top_gnd x2.x1.Vout top_gnd l=200 w=600 x=12360 y=13150 sky130_fd_pr__nfet_g5v0d10v5
+x x1.o x1.o w_100_16400# x1.o l=70 w=1600 x=1792 y=18219 sky130_fd_pr__pfet_01v8_lvt
+x a_11070_13062# x2.x1.Vout top_gnd top_gnd l=200 w=600 x=11070 y=13150 sky130_fd_pr__nfet_g5v0d10v5
+x a_11070_13062# x2.x1.Vout top_gnd top_gnd l=200 w=600 x=12102 y=13150 sky130_fd_pr__nfet_g5v0d10v5
+x x1.o x1.o w_100_16400# x1.o l=70 w=1600 x=2048 y=18219 sky130_fd_pr__pfet_01v8_lvt
+x top_ibias x1.o w_13300_10340# x1.o l=200 w=600 x=11552 y=10817 sky130_fd_pr__pfet_g5v0d10v5
+x top_ibias top_ibias x1.o x1.o l=200 w=600 x=11036 y=9687 sky130_fd_pr__pfet_g5v0d10v5
+x top_ibias x2.x1.Vout x1.o x1.o l=200 w=600 x=11552 y=11937 sky130_fd_pr__pfet_g5v0d10v5
+x w_100_16400# w_100_16400# top_gnd w_100_16400# l=70 w=1600 x=552 y=16619 sky130_fd_pr__pfet_01v8_lvt
+x x1.o w_100_16400# x1.o x1.o l=70 w=1600 x=1920 y=18219 sky130_fd_pr__pfet_01v8_lvt
+x top_ibias x1.o x2.x1.Vout x1.o l=200 w=600 x=10262 y=11937 sky130_fd_pr__pfet_g5v0d10v5
+x top_ibias x2.x1.Vout x1.o x1.o l=200 w=600 x=10004 y=11937 sky130_fd_pr__pfet_g5v0d10v5
+x w_100_16400# w_100_16400# top_gnd w_100_16400# l=70 w=1600 x=296 y=16619 sky130_fd_pr__pfet_01v8_lvt
+x top_out w_13300_10340# a_13658_10637# w_13300_10340# l=100 w=400 x=13558 y=10637 sky130_fd_pr__pfet_g5v0d10v5
+x w_100_16400# w_100_16400# top_gnd w_100_16400# l=70 w=1600 x=808 y=16619 sky130_fd_pr__pfet_01v8_lvt
+x x1.o w_100_16400# x1.o x1.o l=70 w=1600 x=1664 y=18219 sky130_fd_pr__pfet_01v8_lvt
+x top_ibias x1.o top_ibias x1.o l=200 w=600 x=11810 y=9687 sky130_fd_pr__pfet_g5v0d10v5
+x a_13658_10637# a_13658_10637# top_gnd top_gnd l=100 w=1400 x=14200 y=9650 sky130_fd_pr__nfet_g5v0d10v5
+x w_100_16400# top_in l=6000 w=6000 x=299 y=20180 sky130_fd_pr__cap_mim_m3_1
+x top_ibias x1.o top_ibias x1.o l=200 w=600 x=11294 y=9687 sky130_fd_pr__pfet_g5v0d10v5
+x top_ibias top_ibias x1.o x1.o l=200 w=600 x=11552 y=9687 sky130_fd_pr__pfet_g5v0d10v5
+x a_13658_10637# a_11070_13062# top_gnd top_gnd l=100 w=1400 x=14200 y=11550 sky130_fd_pr__nfet_g5v0d10v5
+x w_100_16400# top_gnd w_100_16400# w_100_16400# l=70 w=1600 x=424 y=16619 sky130_fd_pr__pfet_01v8_lvt
+x top_ibias w_13300_10340# x1.o x1.o l=200 w=600 x=11810 y=10817 sky130_fd_pr__pfet_g5v0d10v5
+x top_ibias x1.o x2.x1.Vout x1.o l=200 w=600 x=11810 y=11937 sky130_fd_pr__pfet_g5v0d10v5
+x top_ibias x2.x1.Vout x1.o x1.o l=200 w=600 x=10520 y=11937 sky130_fd_pr__pfet_g5v0d10v5
+x top_ibias x1.o w_13300_10340# x1.o l=200 w=600 x=12068 y=10817 sky130_fd_pr__pfet_g5v0d10v5
+x x1.o x1.o w_100_16400# x1.o l=70 w=1600 x=1536 y=18219 sky130_fd_pr__pfet_01v8_lvt
+x top_ibias x2.x1.Vout x1.o x1.o l=200 w=600 x=12068 y=11937 sky130_fd_pr__pfet_g5v0d10v5
+x top_ibias x2.x1.Vout x1.o x1.o l=200 w=600 x=9488 y=11937 sky130_fd_pr__pfet_g5v0d10v5
+x x1.o top_gnd l=6000 w=6000 x=2899 y=7050 sky130_fd_pr__cap_mim_m3_1
+x a_11070_13062# x2.x1.Vout top_gnd top_gnd l=200 w=600 x=11586 y=13150 sky130_fd_pr__nfet_g5v0d10v5
+x a_11070_13062# x2.x1.Vout top_gnd top_gnd l=200 w=600 x=12618 y=13150 sky130_fd_pr__nfet_g5v0d10v5
+x top_ibias x1.o top_ibias x1.o l=200 w=600 x=12326 y=9687 sky130_fd_pr__pfet_g5v0d10v5
+x top_ibias top_ibias x1.o x1.o l=200 w=600 x=12068 y=9687 sky130_fd_pr__pfet_g5v0d10v5
+x a_11070_13062# top_gnd x2.x1.Vout top_gnd l=200 w=600 x=11328 y=13150 sky130_fd_pr__nfet_g5v0d10v5
+x top_ibias w_13300_10340# x1.o x1.o l=200 w=600 x=10778 y=10817 sky130_fd_pr__pfet_g5v0d10v5
+x top_ibias x1.o x2.x1.Vout x1.o l=200 w=600 x=10778 y=11937 sky130_fd_pr__pfet_g5v0d10v5
+C x2.x1.Vout a_11070_13062# 47.08
+C x2.x1.Vout x1.o 6.10
+C x1.o top_ibias 22.39
+C x2.x1.Vout top_ibias 2.47
+C w_13300_10340# x1.o 2.69
+C w_13300_10340# top_ibias 2.11
+C x1.o w_100_16400# 4.45
+C top_in w_100_16400# 77.27
+C x2.x1.Vout top_out 3.09
+C top_in GND 17.62
+= top_in x1.i
+C a_13658_10637# GND 2.13
+R a_13658_10637# 6662
+R top_ref 397
+= top_ref x2.x1.Vip
+C top_ibias GND 5.83
+R top_ibias 24718
+= top_ibias x2.x1.Ibias
+C a_11070_13062# GND 9.41
+R a_11070_13062# 8201
+C x2.x1.Vout GND 24.64
+R x2.x1.Vout 25670
+C top_out GND 6.57
+R top_out 5109
+= top_out x2.x1.Vin
+C w_13300_10340# GND 4.41
+R w_13300_10340# 30804
+C x1.o GND 292.46
+R x1.o 153234
+C w_100_16400# GND 15.38
+R w_100_16400# 69100
+R top_gnd 107733
+= top_gnd x1.ground

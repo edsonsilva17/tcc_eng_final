@@ -1,0 +1,121 @@
+timestamp 0
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+parameters sky130_fd_pr__nfet_03v3_nvt l=l w=w a1=as p1=ps a2=ad p2=pd
+parameters sky130_fd_pr__nfet_g5v0d10v5 l=l w=w a1=as p1=ps a2=ad p2=pd
+parameters sky130_fd_pr__nfet_20v0 l=l w=w a1=as a2=ad p1=ps p2=pd
+parameters sky130_fd_pr__pfet_g5v0d10v5 l=l w=w a1=as p1=ps a2=ad p2=pd
+parameters sky130_fd_pr__pfet_20v0 l=l w=w a1=as a2=ad p1=ps p2=pd
+parameters sky130_fd_pr__pfet_01v8_lvt l=l w=w a1=as p1=ps a2=ad p2=pd
+parameters sky130_fd_pr__cap_mim_m3_1 w=w l=l
+port "top_in" 0 -230 26620 -30 26820 m1
+port "top_ref" 3 15200 12210 15400 12410 m1
+port "top_ibias" 2 15200 8960 15400 9160 m1
+port "top_out" 4 15230 19540 15430 19740 m1
+port "top_gnd" 1 -230 16180 -30 16380 m1
+node "x1.i" 4 17623.1 -230 26620 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 122000 1620 16800 520 39072000 25538 633072 13342 0 0 0 0
+equiv "x1.i" "top_in"
+node "a_13658_10637#" 6662 2126.31 13658 10637 mvpdif 0 0 0 0 0 0 0 0 0 0 0 0 81200 2916 23200 916 0 0 0 0 0 0 0 0 0 0 0 0 0 0 315200 6704 0 0 75344 4840 210666 5186 0 0 0 0 0 0 0 0 0 0
+node "x2.x1.Vip" 397 1377.19 13558 11460 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 59400 1388 0 0 6800 536 292416 4960 0 0 0 0 0 0 0 0 0 0
+equiv "x2.x1.Vip" "top_ref"
+node "x2.x1.Ibias" 16133 5831 9488 11840 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 139200 5264 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4605200 57652 0 0 477088 32280 2686964 53136 157500 3680 0 0 0 0 0 0 0 0
+equiv "x2.x1.Ibias" "top_ibias"
+node "a_11070_13062#" 8201 9407.55 11070 13062 p 0 0 0 0 0 0 0 0 0 0 0 0 81200 2916 23200 916 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1086400 13664 0 0 156944 10320 343226 10946 207900 4000 11000 420 20573774 20366 0 0 0 0
+node "x2.x1.Vout" 25670 24643.6 9430 11937 mvpdif 0 0 0 0 0 0 0 0 0 0 0 0 139200 5264 243600 9212 0 0 0 0 0 0 0 0 0 0 0 0 0 0 217600 4552 0 0 234192 14660 2510932 34930 13000 460 23529600 19878 508160 10744 0 0 0 0
+node "x2.x1.Vin" 5109 6565.88 12095 19229 mvndif 0 0 0 0 0 0 0 0 0 0 0 0 116000 4116 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 59400 1388 0 0 75072 4620 531706 8694 32400 1020 1492800 18980 0 0 0 0 0 0
+equiv "x2.x1.Vin" "top_out"
+node "w_13300_10340#" 30804 4407.83 13300 10340 nw 0 0 0 0 1179024 5060 0 0 0 0 0 0 285360 9840 220400 8412 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 298384 18028 573220 10216 0 0 0 0 0 0 0 0 0 0
+node "x1.o" 87133 292465 1340 18000 nw 0 0 0 0 12211040 20536 0 0 190400 11200 278400 9948 1426568 49308 556800 21056 0 0 0 0 0 0 0 0 0 0 0 0 0 0 627900 18640 0 0 1545504 92952 4048830 52274 892800 12100 46000 1200 105476228 74552 0 0 0 0
+node "w_100_16400#" 69100 15378.8 100 16400 nw 0 0 0 0 1985012 6024 0 0 190400 11200 556800 19896 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 627900 18640 0 0 542232 32984 1173908 12276 16800 520 18200 540 35197924 25286 0 0 0 0
+substrate "x1.ground" 0 0 366 16619 pdif 0 0 0 0 0 0 0 0 0 0 278400 9948 301600 11096 1194336 41184 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1042576 61940 3363508 43752 2768100 33520 117194100 75374 2432544 38554 0 0 0 0
+equiv "x1.ground" "top_gnd"
+cap "x2.x1.Vin" "a_13658_10637#" 345.633
+cap "x2.x1.Vip" "x1.o" 82.4731
+cap "w_13300_10340#" "x1.o" 2690.35
+cap "a_11070_13062#" "a_13658_10637#" 128.885
+cap "a_11070_13062#" "x2.x1.Vin" 318.099
+cap "x2.x1.Vip" "a_13658_10637#" 69.108
+cap "x2.x1.Vout" "x2.x1.Ibias" 2471.26
+cap "w_13300_10340#" "a_13658_10637#" 578.146
+cap "x2.x1.Vip" "x2.x1.Vin" 139.526
+cap "x1.i" "w_100_16400#" 77266.1
+cap "w_13300_10340#" "x2.x1.Vin" 586.725
+cap "w_100_16400#" "x1.o" 4449.88
+cap "x2.x1.Ibias" "x1.o" 22389
+cap "x2.x1.Vip" "a_11070_13062#" 252.57
+cap "w_13300_10340#" "a_11070_13062#" 701.757
+cap "x2.x1.Vout" "x1.o" 6101.44
+cap "x2.x1.Vip" "w_13300_10340#" 350.28
+cap "x2.x1.Ibias" "a_13658_10637#" 49.4915
+cap "x2.x1.Ibias" "x2.x1.Vin" 60.3914
+cap "x1.i" "x1.o" 987.431
+cap "x2.x1.Ibias" "a_11070_13062#" 615.317
+cap "x2.x1.Vout" "a_13658_10637#" 10.4039
+cap "x2.x1.Vout" "x2.x1.Vin" 3087.88
+cap "x1.o" "a_13658_10637#" 68.9928
+cap "x2.x1.Vout" "a_11070_13062#" 47083.7
+cap "x2.x1.Vip" "x2.x1.Ibias" 24.3989
+cap "x2.x1.Ibias" "w_13300_10340#" 2110.55
+cap "x1.o" "x2.x1.Vin" 627.069
+cap "a_11070_13062#" "x1.o" 1567.48
+cap "x2.x1.Vip" "x2.x1.Vout" 13.9728
+cap "x2.x1.Vout" "w_13300_10340#" 17.8577
+device csubckt sky130_fd_pr__cap_mim_m3_1 2899 750 2900 751 w=6000 l=6000 "None" "x1.o" 23680 0 "x1.ground" 1600 0
+device csubckt sky130_fd_pr__cap_mim_m3_1 2899 7050 2900 7051 w=6000 l=6000 "None" "x1.o" 23680 0 "x1.ground" 1600 0
+device csubckt sky130_fd_pr__cap_mim_m3_1 9660 14130 9661 14131 w=4600 l=4600 "None" "a_11070_13062#" 18080 0 "x2.x1.Vout" 1600 0
+device csubckt sky130_fd_pr__cap_mim_m3_1 2899 13350 2900 13351 w=6000 l=6000 "None" "x1.o" 23680 0 "x1.ground" 1600 0
+device csubckt sky130_fd_pr__cap_mim_m3_1 299 20180 300 20181 w=6000 l=6000 "None" "w_100_16400#" 23680 0 "x1.i" 1600 0
+device msubckt sky130_fd_pr__nfet_g5v0d10v5 14200 9650 14201 9651 l=100 w=1400 "x1.ground" "a_13658_10637#" 200 0 "a_13658_10637#" 1400 0 "x1.ground" 1400 0
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 13558 10637 13559 10638 l=100 w=400 "w_13300_10340#" "x2.x1.Vin" 200 0 "w_13300_10340#" 400 0 "a_13658_10637#" 400 0
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 12584 9687 12585 9688 l=200 w=600 "x1.o" "x2.x1.Ibias" 400 0 "x2.x1.Ibias" 600 0 "x1.o" 600 0
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 12326 9687 12327 9688 l=200 w=600 "x1.o" "x2.x1.Ibias" 400 0 "x1.o" 600 0 "x2.x1.Ibias" 600 0
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 12068 9687 12069 9688 l=200 w=600 "x1.o" "x2.x1.Ibias" 400 0 "x2.x1.Ibias" 600 0 "x1.o" 600 0
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 11810 9687 11811 9688 l=200 w=600 "x1.o" "x2.x1.Ibias" 400 0 "x1.o" 600 0 "x2.x1.Ibias" 600 0
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 11552 9687 11553 9688 l=200 w=600 "x1.o" "x2.x1.Ibias" 400 0 "x2.x1.Ibias" 600 0 "x1.o" 600 0
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 11294 9687 11295 9688 l=200 w=600 "x1.o" "x2.x1.Ibias" 400 0 "x1.o" 600 0 "x2.x1.Ibias" 600 0
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 11036 9687 11037 9688 l=200 w=600 "x1.o" "x2.x1.Ibias" 400 0 "x2.x1.Ibias" 600 0 "x1.o" 600 0
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 10778 9687 10779 9688 l=200 w=600 "x1.o" "x2.x1.Ibias" 400 0 "x1.o" 600 0 "x2.x1.Ibias" 600 0
+device msubckt sky130_fd_pr__nfet_g5v0d10v5 14200 11550 14201 11551 l=100 w=1400 "x1.ground" "a_13658_10637#" 200 0 "a_11070_13062#" 1400 0 "x1.ground" 1400 0
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 13558 11557 13559 11558 l=100 w=400 "w_13300_10340#" "x2.x1.Vip" 200 0 "w_13300_10340#" 400 0 "a_11070_13062#" 400 0
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 12584 10817 12585 10818 l=200 w=600 "x1.o" "x2.x1.Ibias" 400 0 "x1.o" 600 0 "w_13300_10340#" 600 0
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 12326 10817 12327 10818 l=200 w=600 "x1.o" "x2.x1.Ibias" 400 0 "w_13300_10340#" 600 0 "x1.o" 600 0
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 12068 10817 12069 10818 l=200 w=600 "x1.o" "x2.x1.Ibias" 400 0 "x1.o" 600 0 "w_13300_10340#" 600 0
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 11810 10817 11811 10818 l=200 w=600 "x1.o" "x2.x1.Ibias" 400 0 "w_13300_10340#" 600 0 "x1.o" 600 0
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 11552 10817 11553 10818 l=200 w=600 "x1.o" "x2.x1.Ibias" 400 0 "x1.o" 600 0 "w_13300_10340#" 600 0
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 11294 10817 11295 10818 l=200 w=600 "x1.o" "x2.x1.Ibias" 400 0 "w_13300_10340#" 600 0 "x1.o" 600 0
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 11036 10817 11037 10818 l=200 w=600 "x1.o" "x2.x1.Ibias" 400 0 "x1.o" 600 0 "w_13300_10340#" 600 0
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 10778 10817 10779 10818 l=200 w=600 "x1.o" "x2.x1.Ibias" 400 0 "w_13300_10340#" 600 0 "x1.o" 600 0
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 12584 11937 12585 11938 l=200 w=600 "x1.o" "x2.x1.Ibias" 400 0 "x2.x1.Vout" 600 0 "x1.o" 600 0
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 12326 11937 12327 11938 l=200 w=600 "x1.o" "x2.x1.Ibias" 400 0 "x1.o" 600 0 "x2.x1.Vout" 600 0
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 12068 11937 12069 11938 l=200 w=600 "x1.o" "x2.x1.Ibias" 400 0 "x2.x1.Vout" 600 0 "x1.o" 600 0
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 11810 11937 11811 11938 l=200 w=600 "x1.o" "x2.x1.Ibias" 400 0 "x1.o" 600 0 "x2.x1.Vout" 600 0
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 11552 11937 11553 11938 l=200 w=600 "x1.o" "x2.x1.Ibias" 400 0 "x2.x1.Vout" 600 0 "x1.o" 600 0
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 11294 11937 11295 11938 l=200 w=600 "x1.o" "x2.x1.Ibias" 400 0 "x1.o" 600 0 "x2.x1.Vout" 600 0
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 11036 11937 11037 11938 l=200 w=600 "x1.o" "x2.x1.Ibias" 400 0 "x2.x1.Vout" 600 0 "x1.o" 600 0
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 10778 11937 10779 11938 l=200 w=600 "x1.o" "x2.x1.Ibias" 400 0 "x1.o" 600 0 "x2.x1.Vout" 600 0
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 10520 11937 10521 11938 l=200 w=600 "x1.o" "x2.x1.Ibias" 400 0 "x2.x1.Vout" 600 0 "x1.o" 600 0
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 10262 11937 10263 11938 l=200 w=600 "x1.o" "x2.x1.Ibias" 400 0 "x1.o" 600 0 "x2.x1.Vout" 600 0
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 10004 11937 10005 11938 l=200 w=600 "x1.o" "x2.x1.Ibias" 400 0 "x2.x1.Vout" 600 0 "x1.o" 600 0
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 9746 11937 9747 11938 l=200 w=600 "x1.o" "x2.x1.Ibias" 400 0 "x1.o" 600 0 "x2.x1.Vout" 600 0
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 9488 11937 9489 11938 l=200 w=600 "x1.o" "x2.x1.Ibias" 400 0 "x2.x1.Vout" 600 0 "x1.o" 600 0
+device msubckt sky130_fd_pr__nfet_g5v0d10v5 12618 13150 12619 13151 l=200 w=600 "x1.ground" "a_11070_13062#" 400 0 "x2.x1.Vout" 600 0 "x1.ground" 600 0
+device msubckt sky130_fd_pr__nfet_g5v0d10v5 12360 13150 12361 13151 l=200 w=600 "x1.ground" "a_11070_13062#" 400 0 "x1.ground" 600 0 "x2.x1.Vout" 600 0
+device msubckt sky130_fd_pr__nfet_g5v0d10v5 12102 13150 12103 13151 l=200 w=600 "x1.ground" "a_11070_13062#" 400 0 "x2.x1.Vout" 600 0 "x1.ground" 600 0
+device msubckt sky130_fd_pr__nfet_g5v0d10v5 11844 13150 11845 13151 l=200 w=600 "x1.ground" "a_11070_13062#" 400 0 "x1.ground" 600 0 "x2.x1.Vout" 600 0
+device msubckt sky130_fd_pr__nfet_g5v0d10v5 11586 13150 11587 13151 l=200 w=600 "x1.ground" "a_11070_13062#" 400 0 "x2.x1.Vout" 600 0 "x1.ground" 600 0
+device msubckt sky130_fd_pr__nfet_g5v0d10v5 11328 13150 11329 13151 l=200 w=600 "x1.ground" "a_11070_13062#" 400 0 "x1.ground" 600 0 "x2.x1.Vout" 600 0
+device msubckt sky130_fd_pr__nfet_g5v0d10v5 11070 13150 11071 13151 l=200 w=600 "x1.ground" "a_11070_13062#" 400 0 "x2.x1.Vout" 600 0 "x1.ground" 600 0
+device msubckt sky130_fd_pr__nfet_03v3_nvt 12095 19129 12096 19130 l=100 w=2000 "x1.ground" "x2.x1.Vout" 200 0 "x1.o" 2000 0 "x2.x1.Vin" 2000 0
+device msubckt sky130_fd_pr__pfet_01v8_lvt 2048 18219 2049 18220 l=70 w=1600 "x1.o" "x1.o" 140 0 "x1.o" 1600 0 "w_100_16400#" 1600 0
+device msubckt sky130_fd_pr__pfet_01v8_lvt 1920 18219 1921 18220 l=70 w=1600 "x1.o" "x1.o" 140 0 "w_100_16400#" 1600 0 "x1.o" 1600 0
+device msubckt sky130_fd_pr__pfet_01v8_lvt 1792 18219 1793 18220 l=70 w=1600 "x1.o" "x1.o" 140 0 "x1.o" 1600 0 "w_100_16400#" 1600 0
+device msubckt sky130_fd_pr__pfet_01v8_lvt 1664 18219 1665 18220 l=70 w=1600 "x1.o" "x1.o" 140 0 "w_100_16400#" 1600 0 "x1.o" 1600 0
+device msubckt sky130_fd_pr__pfet_01v8_lvt 1536 18219 1537 18220 l=70 w=1600 "x1.o" "x1.o" 140 0 "x1.o" 1600 0 "w_100_16400#" 1600 0
+device msubckt sky130_fd_pr__pfet_01v8_lvt 808 16619 809 16620 l=70 w=1600 "w_100_16400#" "w_100_16400#" 140 0 "w_100_16400#" 1600 0 "x1.ground" 1600 0
+device msubckt sky130_fd_pr__pfet_01v8_lvt 680 16619 681 16620 l=70 w=1600 "w_100_16400#" "w_100_16400#" 140 0 "x1.ground" 1600 0 "w_100_16400#" 1600 0
+device msubckt sky130_fd_pr__pfet_01v8_lvt 552 16619 553 16620 l=70 w=1600 "w_100_16400#" "w_100_16400#" 140 0 "w_100_16400#" 1600 0 "x1.ground" 1600 0
+device msubckt sky130_fd_pr__pfet_01v8_lvt 424 16619 425 16620 l=70 w=1600 "w_100_16400#" "w_100_16400#" 140 0 "x1.ground" 1600 0 "w_100_16400#" 1600 0
+device msubckt sky130_fd_pr__pfet_01v8_lvt 296 16619 297 16620 l=70 w=1600 "w_100_16400#" "w_100_16400#" 140 0 "w_100_16400#" 1600 0 "x1.ground" 1600 0

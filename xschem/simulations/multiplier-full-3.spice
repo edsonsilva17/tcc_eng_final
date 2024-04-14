@@ -1,0 +1,47 @@
+** sch_path: /foss/designs/tcc_eng/xschem/multiplier-full-3.sch
+**.subckt multiplier-full-3
+V1 in GND sin (0 0.5 2.45E9)
+.save i(v1)
+x1 net1 in GND cell
+x2 net2 in net1 cell
+R2 GND out1 190k m=1
+x3 out1 in net2 cell
+**** begin user architecture code
+
+
+*.TRAN TSTEP TSTOP <TSTART <TMAX>> <UIC>
+
+.control
+save all
+tran 0.02n 5u
+plot out1
+.endc
+
+
+
+** opencircuitdesign pdks install
+.lib /foss/pdks/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  cell.sym # of pins=3
+** sym_path: /foss/designs/tcc_eng/xschem/cell.sym
+** sch_path: /foss/designs/tcc_eng/xschem/cell.sch
+.subckt cell o i ground
+*.iopin ground
+*.iopin o
+*.iopin i
+XM10 net1 net1 ground net1 sky130_fd_pr__pfet_01v8_lvt L=0.35 W=40 nf=5 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM1 o o net1 o sky130_fd_pr__pfet_01v8_lvt L=0.35 W=40 nf=5 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XC3 o ground sky130_fd_pr__cap_mim_m3_1 W=30 L=30 MF=3 m=3
+XC2 net1 i sky130_fd_pr__cap_mim_m3_1 W=30 L=30 MF=1 m=1
+.ends
+
+.GLOBAL GND
+.end

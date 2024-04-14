@@ -1,0 +1,28 @@
+missing operand at _@_
+in expression "1220 + 2522 +  _@_* "
+missing operand at _@_
+in expression "1220 + 2522 +  _@_* "
+    (parsing expression "1220 + 2522 +  * ")
+    invoked from within
+"expr $posx + $width + $xpitch * $anum"
+    (procedure "magic::move_forward_by_width" line 9)
+    invoked from within
+"magic::move_forward_by_width $instname"
+    (procedure "magic::generate_layout_add" line 111)
+    invoked from within
+"magic::generate_layout_add $subname $subpins $complist $library"
+    (procedure "magic::netlist_to_layout" line 87)
+    invoked from within
+"magic::netlist_to_layout $Layoutfilename sky130"
+    (procedure "sky130::importspice" line 6)
+    invoked from within
+"sky130::importspice"
+    invoked from within
+".layout1.pane.top.titlebar.mbuttons.file.toolmenu invoke active"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel #0 [list $w invoke active]"
+    (procedure "tk::MenuInvoke" line 50)
+    invoked from within
+"tk::MenuInvoke .layout1.pane.top.titlebar.mbuttons.file.toolmenu 1"
+    (command bound to event)

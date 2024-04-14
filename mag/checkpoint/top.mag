@@ -1,0 +1,37 @@
+magic
+tech sky130A
+timestamp 1712944354
+<< metal1 >>
+rect 1000 9500 1100 9600
+rect 1000 9300 1100 9400
+rect 1000 9100 1100 9200
+rect 1000 8900 1100 9000
+rect 1000 8700 1100 8800
+use cell  x1
+timestamp 1712944235
+transform 1 0 950 0 1 11200
+box -450 -7700 4100 5410
+use cell  x2
+timestamp 1712944235
+transform 1 0 5450 0 1 11200
+box -450 -7700 4100 5410
+use cell  x3
+timestamp 1712944235
+transform 1 0 9950 0 1 11200
+box -450 -7700 4100 5410
+use LDO  x4
+timestamp 1712939325
+transform 1 0 14500 0 1 10750
+box 0 250 3035 5475
+<< labels >>
+flabel metal1 1000 9500 1100 9600 0 FreeSans 128 0 0 0 top_in
+port 0 nsew
+flabel metal1 1000 9300 1100 9400 0 FreeSans 128 0 0 0 top_gnd
+port 1 nsew
+flabel metal1 1000 9100 1100 9200 0 FreeSans 128 0 0 0 top_ibias
+port 2 nsew
+flabel metal1 1000 8900 1100 9000 0 FreeSans 128 0 0 0 top_ref
+port 3 nsew
+flabel metal1 1000 8700 1100 8800 0 FreeSans 128 0 0 0 top_out
+port 4 nsew
+<< end >>
