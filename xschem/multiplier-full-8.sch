@@ -74,7 +74,7 @@ value="
 spice_ignore=false}
 C {devices/gnd.sym} 2300 -1040 0 0 {name=l7 lab=GND}
 C {lab_pin.sym} 2300 -1190 0 0 {name=in sig_type=std_logic lab=in}
-C {vsource.sym} 2300 -1110 0 0 {name=V1 value="sin (0 0.55 2.45E9)"}
+C {vsource.sym} 2300 -1110 0 0 {name=V1 value="sin (0 1 2.45E9)"}
 C {cell.sym} 2570 -1200 0 0 {name=x1}
 C {lab_pin.sym} 2400 -1180 0 0 {name=in1 sig_type=std_logic lab=in}
 C {lab_pin.sym} 3010 -1740 2 0 {name=p1 sig_type=std_logic lab=out1}

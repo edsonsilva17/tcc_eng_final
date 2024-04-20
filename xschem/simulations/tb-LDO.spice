@@ -1,4 +1,4 @@
-** sch_path: /foss/designs/tcc_eng/xschem/tb-LDO.sch
+** sch_path: /foss/designs/tcc_eng_final/xschem/tb-LDO.sch
 **.subckt tb-LDO
 x1 in out net1 net2 GND LDO
 I0 net1 GND 5u
@@ -7,6 +7,7 @@ V1 net2 GND 1.8
 Vin in GND 0
 .save i(vin)
 R1 out GND 190k m=1
+C1 out net3 100p m=1
 **** begin user architecture code
 
 ** opencircuitdesign pdks install
@@ -29,8 +30,8 @@ plot out
 **.ends
 
 * expanding   symbol:  LDO.sym # of pins=5
-** sym_path: /foss/designs/tcc_eng/xschem/LDO.sym
-** sch_path: /foss/designs/tcc_eng/xschem/LDO.sch
+** sym_path: /foss/designs/tcc_eng_final/xschem/LDO.sym
+** sch_path: /foss/designs/tcc_eng_final/xschem/LDO.sch
 .subckt LDO ldo_in ldo_out ldo_ibias ldo_ref ldo_gnd
 *.iopin ldo_out
 *.iopin ldo_in
@@ -45,8 +46,8 @@ XM1 ldo_in net1 ldo_out ldo_gnd sky130_fd_pr__nfet_03v3_nvt L=0.5 W=10 nf=1 ad='
 
 
 * expanding   symbol:  Ota_esq.sym # of pins=6
-** sym_path: /foss/designs/tcc_eng/xschem/Ota_esq.sym
-** sch_path: /foss/designs/tcc_eng/xschem/Ota_esq.sch
+** sym_path: /foss/designs/tcc_eng_final/xschem/Ota_esq.sym
+** sch_path: /foss/designs/tcc_eng_final/xschem/Ota_esq.sch
 .subckt Ota_esq VDD Vin Vip Vout Ibias VSS
 *.ipin Vin
 *.ipin Vip

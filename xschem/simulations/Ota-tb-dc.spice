@@ -4,7 +4,7 @@ Vin in GND 0
 .save i(vin)
 Vdd vd GND 2
 .save i(vdd)
-I0 net1 GND 5u
+I0 net1 GND 0.5u
 C1 out GND 4p m=1
 x1 vd in ref out net1 GND Ota_esq
 Vref ref GND 1

@@ -1,26 +1,45 @@
-** sch_path: /foss/designs/tcc_eng_final/xschem/multiplier-full-1.sch
-**.subckt multiplier-full-1
-V1 in GND sin (0 1 2.45E9)
+** sch_path: /foss/designs/tcc_eng_final/xschem/multiplier-full-1-casamento-dbm.sch
+**.subckt multiplier-full-1-casamento-dbm
+V1 din GND sin (0 amp 2.45E9)
 .save i(v1)
-x1 out in GND cell
-R1 out GND 190k m=1
+x1 do net3 GND cell
+R2 GND do 190k m=1
+R1 din net1 {Z} m=1
+L3 net2 net1 2923n m=1
+C2 net2 GND 0.0023393p m=1
+L5 net3 net2 4710n m=1
 **** begin user architecture code
-
-
-*.TRAN TSTEP TSTOP <TSTART <TMAX>> <UIC>
-
-.control
-save all
-tran 0.01n 5u
-plot out
-plot in
-.endc
-
-
 
 ** opencircuitdesign pdks install
 .lib /foss/pdks/sky130A/libs.tech/ngspice/sky130.lib.spice tt
 
+
+
+
+.PARAM Z = 300
+.PARAM amp = 0.24495
+
+
+.CONTROL
+foreach mydbm -10 -9 -8 -7 -6 -5 -4 -3 -2 -1 0
+  echo amp is $mydbm
+  reset
+  alterparam amp = ((sqrt(2))*(sqrt(Z/1000))*(10**(($mydbm)/20)))
+  save all
+  tran 0.02n 5u
+  meas tran out RMS v(do) from=4.999u to=5u
+end
+
+  wrdata mul1.csv tran1.out tran2.out tran3.out tran4.out tran5.out tran6.out tran7.out tran8.out
++ tran9.out tran10.out tran11.out
+
+.ENDC
+
+**** end user architecture code
+
+
+.GLOBAL GND
+.end
 
 **** end user architecture code
 **.ends

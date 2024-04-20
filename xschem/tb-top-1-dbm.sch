@@ -6,9 +6,9 @@ V {}
 S {}
 E {}
 N 3070 -1290 3190 -1290 {
-lab=out1}
+lab=do}
 N 3190 -1290 3250 -1290 {
-lab=out1}
+lab=do}
 N 3100 -1130 3100 -1090 {
 lab=GND}
 N 2750 -1130 2750 -1090 {
@@ -16,15 +16,15 @@ lab=GND}
 N 2920 -1200 2920 -1180 {
 lab=GND}
 N 3250 -1290 3330 -1290 {
-lab=out1}
+lab=do}
 N 3280 -1130 3280 -1090 {
 lab=GND}
 N 3280 -1290 3280 -1190 {
-lab=out1}
+lab=do}
 N 3190 -1130 3190 -1090 {
 lab=GND}
 N 3190 -1290 3190 -1190 {
-lab=out1}
+lab=do}
 N 2750 -1230 2750 -1190 {
 lab=#net1}
 N 2750 -1230 2770 -1230 {
@@ -61,15 +61,6 @@ N 2760 -1310 2760 -1290 {
 lab=#net6}
 N 2760 -1290 2770 -1290 {
 lab=#net6}
-C {devices/code_shown.sym} 2440 -950 0 0 {name=simulation only_toplevel=false value="
-*.TRAN TSTEP TSTOP <TSTART <TMAX>> <UIC>
-
-.control
-save all
-tran 0.02n 30u
-plot out1
-.endc
-"}
 C {devices/code.sym} 3010 -920 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
@@ -88,7 +79,7 @@ C {devices/gnd.sym} 3280 -1090 0 0 {name=l2 lab=GND}
 C {isource.sym} 2750 -1160 0 0 {name=I0 value=0.5u}
 C {vsource.sym} 3100 -1160 0 0 {name=V2 value=1.8}
 C {devices/gnd.sym} 2920 -1180 0 0 {name=l3 lab=GND}
-C {lab_pin.sym} 3330 -1290 2 0 {name=p1 sig_type=std_logic lab=out1}
+C {lab_pin.sym} 3330 -1290 2 0 {name=p1 sig_type=std_logic lab=do}
 C {devices/gnd.sym} 3190 -1090 0 0 {name=l1 lab=GND}
 C {capa.sym} 3190 -1160 0 0 {name=C1
 m=1
@@ -99,7 +90,7 @@ C {devices/gnd.sym} 3100 -1090 0 0 {name=l4 lab=GND}
 C {devices/gnd.sym} 2750 -1090 0 0 {name=l5 lab=GND}
 C {top-1.sym} 2920 -1270 0 0 {name=x1}
 C {devices/gnd.sym} 2230 -1160 0 0 {name=l6 lab=GND}
-C {vsource.sym} 2230 -1230 0 0 {name=V3 value="sin (0 0.45 2.45E9)"}
+C {vsource.sym} 2230 -1230 0 0 {name=V3 value="sin (0 amp 2.45E9)"}
 C {res.sym} 2280 -1310 3 0 {name=R1
 value=300
 footprint=1206
@@ -121,3 +112,27 @@ m=1
 value=4710n
 footprint=1206
 device=inductor}
+C {code.sym} 2710 -920 0 0 {name=Simulation only_toplevel=false value="
+.PARAM Z = 300
+.PARAM amp = 0.24495
+
+
+.CONTROL
+foreach mydbm -10 -9 -8 -7 -6 -5 -4 -3 -2 -1 0 -1
+  echo amp is $mydbm
+  reset
+  alterparam amp = ((sqrt(2))*(sqrt(Z/1000))*(10**(($mydbm)/20)))
+  save all
+  tran 0.02n 30u
+  meas tran out RMS v(do) from=29.999u to=30u
+end
+
+  wrdata toposense.csv tran1.out tran2.out tran3.out tran4.out tran5.out tran6.out tran7.out tran8.out tran9.out tran10.out tran11.out tran12.out 
+
+.ENDC
+
+**** end user architecture code
+
+
+.GLOBAL GND
+.end"}

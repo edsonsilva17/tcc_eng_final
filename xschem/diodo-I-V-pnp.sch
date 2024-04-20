@@ -41,8 +41,8 @@ value="
 spice_ignore=false}
 C {sky130_fd_pr/pfet_01v8_lvt.sym} -40 10 0 0 {name=M1
 L=0.35
-W=20
-nf=1 mult=1
+W=40
+nf=5 mult=1
 model=pfet_01v8_lvt
 spiceprefix=X
 }

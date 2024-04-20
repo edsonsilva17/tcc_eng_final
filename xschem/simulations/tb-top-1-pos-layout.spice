@@ -1,17 +1,17 @@
-** sch_path: /foss/designs/tcc_eng/xschem/tb-top-1-pos-layout.sch
+** sch_path: /foss/designs/tcc_eng_final/xschem/tb-top-1-pos-layout.sch
 **.subckt tb-top-1-pos-layout
-I0 net1 GND 5u
+I0 net1 GND 0.5u
 V2 net2 GND 1.8
 .save i(v2)
 C1 out1 GND 100p m=1
-R1 GND out1 190k m=1
+R1 GND out1 1000k m=1
 x1 net3 out1 net2 net1 GND top-1-pos-layout
-V3 net4 GND sin (0 0.8 2.45E9)
+V3 net4 GND sin (0 1.9 2.45E9)
 .save i(v3)
-R2 net4 net5 50 m=1
-L7 net6 net5 682.1n m=1
-C3 net6 GND 0.010015p m=1
-L11 net3 net6 1.0985u m=1
+R2 net4 net5 300 m=1
+L9 net6 net5 2923n m=1
+C2 net6 GND 0.0023393p m=1
+L10 net3 net6 4710n m=1
 **** begin user architecture code
 
 
@@ -33,8 +33,8 @@ plot out1
 **.ends
 
 * expanding   symbol:  top-1-pos-layout.sym # of pins=5
-** sym_path: /foss/designs/tcc_eng/xschem/top-1-pos-layout.sym
-** sch_path: /foss/designs/tcc_eng/xschem/top-1-pos-layout.sch
+** sym_path: /foss/designs/tcc_eng_final/xschem/top-1-pos-layout.sym
+** sch_path: /foss/designs/tcc_eng_final/xschem/top-1-pos-layout.sch
 .subckt top-1-pos-layout top_in top_out top_ref top_ibias top_gnd
 *.iopin top_in
 *.iopin top_gnd

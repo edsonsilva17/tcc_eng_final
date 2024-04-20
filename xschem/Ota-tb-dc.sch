@@ -55,7 +55,7 @@ value="
 
 "
 spice_ignore=false}
-C {isource.sym} 0 20 0 0 {name=I0 value=5u}
+C {isource.sym} 0 20 0 0 {name=I0 value=0.5u}
 C {gnd.sym} 0 60 0 0 {name=l5 lab=GND}
 C {lab_pin.sym} -200 -30 0 0 {name=p5 sig_type=std_logic lab=in}
 C {lab_pin.sym} -210 -260 0 0 {name=p6 sig_type=std_logic lab=in}

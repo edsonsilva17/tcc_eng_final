@@ -32,7 +32,7 @@ C {devices/code_shown.sym} 1730 -930 0 0 {name=simulation only_toplevel=false va
 
 .control
 save all
-tran 0.02n 5u
+tran 0.01n 5u
 plot out1
 .endc
 "}
@@ -47,7 +47,7 @@ value="
 spice_ignore=false}
 C {devices/gnd.sym} 2310 -1020 0 0 {name=l7 lab=GND}
 C {lab_pin.sym} 2310 -1170 2 0 {name=in sig_type=std_logic lab=in}
-C {vsource.sym} 2310 -1090 0 0 {name=V1 value="sin (0 0.5 2.45E9)"}
+C {vsource.sym} 2310 -1090 0 0 {name=V1 value="sin (0 1 2.45E9)"}
 C {cell.sym} 2580 -1180 0 0 {name=x1}
 C {lab_pin.sym} 2410 -1160 0 0 {name=in2 sig_type=std_logic lab=in}
 C {cell.sym} 2640 -1260 0 0 {name=x2}

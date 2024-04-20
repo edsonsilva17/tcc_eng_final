@@ -1,6 +1,6 @@
-** sch_path: /foss/designs/tcc_eng/xschem/multiplier-full-3.sch
+** sch_path: /foss/designs/tcc_eng_final/xschem/multiplier-full-3.sch
 **.subckt multiplier-full-3
-V1 in GND sin (0 0.5 2.45E9)
+V1 in GND sin (0 1 2.45E9)
 .save i(v1)
 x1 net1 in GND cell
 x2 net2 in net1 cell
@@ -13,7 +13,7 @@ x3 out1 in net2 cell
 
 .control
 save all
-tran 0.02n 5u
+tran 0.01n 5u
 plot out1
 .endc
 
@@ -27,8 +27,8 @@ plot out1
 **.ends
 
 * expanding   symbol:  cell.sym # of pins=3
-** sym_path: /foss/designs/tcc_eng/xschem/cell.sym
-** sch_path: /foss/designs/tcc_eng/xschem/cell.sch
+** sym_path: /foss/designs/tcc_eng_final/xschem/cell.sym
+** sch_path: /foss/designs/tcc_eng_final/xschem/cell.sch
 .subckt cell o i ground
 *.iopin ground
 *.iopin o
