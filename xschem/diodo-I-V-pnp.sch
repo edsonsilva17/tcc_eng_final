@@ -54,6 +54,7 @@ C {devices/code_shown.sym} 300 -250 0 0 {name=simulation only_toplevel=false val
 .control
 save all
 dc VD -1.8 1.8 0.01
+wrdata diodo18.csv i(vd1)
 plot i(vd1)
 .endc
 
