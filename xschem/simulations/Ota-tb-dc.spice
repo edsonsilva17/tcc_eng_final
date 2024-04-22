@@ -17,6 +17,9 @@ Vref ref GND 1
 .control
 save all
 dc Vin 0 2 0.01
+wrdata ota_in.csv in
+wrdata ota_out.csv out
+wrdata ota_ref.csv ref
 plot in out ref
 .endc
 

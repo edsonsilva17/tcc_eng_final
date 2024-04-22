@@ -33,6 +33,7 @@ C {devices/code_shown.sym} 1730 -930 0 0 {name=simulation only_toplevel=false va
 .control
 save all
 tran 0.01n 5u
+wrdata ret3.csv out1
 plot out1
 .endc
 "}

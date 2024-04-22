@@ -17,15 +17,16 @@ N 2590 -1140 2590 -1080 {
 lab=GND}
 N 2420 -1180 2420 -1160 {
 lab=in}
-N 2420 -1100 2420 -1080 {}
+N 2420 -1100 2420 -1080 {
+lab=GND}
 C {devices/code_shown.sym} 1730 -930 0 0 {name=simulation only_toplevel=false value="
 *.TRAN TSTEP TSTOP <TSTART <TMAX>> <UIC>
 
 .control
 save all
 tran 0.01n 5u
+wrdata ret1.csv out
 plot out
-plot in
 .endc
 "}
 C {devices/code.sym} 1700 -1210 0 0 {name=TT_MODELS

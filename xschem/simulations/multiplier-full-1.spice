@@ -12,8 +12,8 @@ R1 out GND 190k m=1
 .control
 save all
 tran 0.01n 5u
+wrdata ret1.csv out
 plot out
-plot in
 .endc
 
 

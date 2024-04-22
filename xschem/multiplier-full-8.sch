@@ -59,8 +59,8 @@ C {devices/code_shown.sym} 1730 -930 0 0 {name=simulation only_toplevel=false va
 .control
 save all
 tran 0.01n 5u
+wrdata ret8.csv out1
 plot out1
-plot in
 .endc
 "}
 C {devices/code.sym} 1700 -1210 0 0 {name=TT_MODELS
