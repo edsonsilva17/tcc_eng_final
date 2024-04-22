@@ -6,7 +6,7 @@ V2 net2 GND 1.8
 .save i(v2)
 C1 out1 GND 100p m=1
 x1 net6 out1 net2 net1 GND top-1
-V3 net3 GND sin (0 0.45 2.45E9)
+V3 net3 GND sin (0 0.346 2.45E9)
 .save i(v3)
 R1 net3 net4 300 m=1
 L9 net5 net4 2923n m=1
@@ -19,7 +19,8 @@ L10 net6 net5 4710n m=1
 
 .control
 save all
-tran 0.02n 30u
+tran 0.02n 40u
+wrdata prelayout_casamento.csv out1
 plot out1
 .endc
 

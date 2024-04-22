@@ -66,7 +66,8 @@ C {devices/code_shown.sym} 2440 -950 0 0 {name=simulation only_toplevel=false va
 
 .control
 save all
-tran 0.02n 30u
+tran 0.02n 40u
+wrdata prelayout_casamento.csv out1
 plot out1
 .endc
 "}
@@ -99,7 +100,7 @@ C {devices/gnd.sym} 3100 -1090 0 0 {name=l4 lab=GND}
 C {devices/gnd.sym} 2750 -1090 0 0 {name=l5 lab=GND}
 C {top-1.sym} 2920 -1270 0 0 {name=x1}
 C {devices/gnd.sym} 2230 -1160 0 0 {name=l6 lab=GND}
-C {vsource.sym} 2230 -1230 0 0 {name=V3 value="sin (0 0.45 2.45E9)"}
+C {vsource.sym} 2230 -1230 0 0 {name=V3 value="sin (0 0.346 2.45E9)"}
 C {res.sym} 2280 -1310 3 0 {name=R1
 value=300
 footprint=1206

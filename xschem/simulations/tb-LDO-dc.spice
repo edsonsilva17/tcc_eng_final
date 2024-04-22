@@ -20,6 +20,7 @@ R1 out GND 190k m=1
 .control
 save all
 dc Vin 0 5.1 0.01 Vref 0.8 1.8 0.2
+wrdata tb_ldo.csv out ref
 plot out
 .endc
 
@@ -38,7 +39,7 @@ plot out
 *.iopin ldo_ref
 *.iopin ldo_ibias
 x1 ldo_in ldo_out ldo_ref net1 ldo_ibias ldo_gnd Ota_esq
-XM1 ldo_in net1 ldo_out ldo_gnd sky130_fd_pr__nfet_01v8_lvt L=0.5 W=10 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
+XM1 ldo_in net1 ldo_out ldo_gnd sky130_fd_pr__nfet_03v3_nvt L=0.5 W=10 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
 + as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
 + nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
 .ends

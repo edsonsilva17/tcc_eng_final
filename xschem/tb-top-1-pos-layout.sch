@@ -62,7 +62,7 @@ C {devices/code_shown.sym} 2440 -950 0 0 {name=simulation only_toplevel=false va
 
 .control
 save all
-tran 0.02n 30u
+tran 0.02n 40u
 plot out1
 .endc
 "}

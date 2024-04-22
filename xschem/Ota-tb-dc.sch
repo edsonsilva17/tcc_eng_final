@@ -42,6 +42,9 @@ C {devices/code_shown.sym} 150 -70 0 0 {name=simulation only_toplevel=false valu
 .control
 save all
 dc Vin 0 2 0.01
+wrdata ota_in.csv in
+wrdata ota_out.csv out
+wrdata ota_ref.csv ref
 plot in out ref
 .endc
 
