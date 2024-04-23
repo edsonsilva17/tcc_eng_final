@@ -34,7 +34,7 @@ lab=ref}
 N 170 -60 190 -60 {
 lab=ref}
 C {LDO.sym} 20 -80 0 0 {name=x1}
-C {isource.sym} -80 20 3 0 {name=I0 value=5u}
+C {isource.sym} -80 20 3 0 {name=I0 value=0.5u}
 C {gnd.sym} 20 40 0 0 {name=l1 lab=GND}
 C {vsource.sym} -260 -10 0 0 {name=Vref value=0.8}
 C {vsource.sym} -320 -10 0 0 {name=Vin value=0}
@@ -64,6 +64,7 @@ C {devices/code_shown.sym} 500 -110 0 0 {name=simulation only_toplevel=false val
 .control
 save all
 dc Vin 0 5.1 0.01 Vref 0.8 1.8 0.2
+wrdata tb_ldo.csv out ref 
 plot out
 .endc
 

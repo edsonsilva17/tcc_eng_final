@@ -1,34 +1,49 @@
-** sch_path: /foss/designs/tcc_eng_final/xschem/tb-top-1.sch
-**.subckt tb-top-1
-R2 GND out1 1000k m=1
+** sch_path: /foss/designs/tcc_eng_final/xschem/tb-top-1-pos-dbm.sch
+**.subckt tb-top-1-pos-dbm
+R2 GND do 1000k m=1
 I0 net1 GND 0.5u
 V2 net2 GND 1.8
 .save i(v2)
-C1 out1 GND 100p m=1
-x1 net6 out1 net2 net1 GND top-1
-V3 net3 GND sin (0 0.346 2.45E9)
+C1 do GND 100p m=1
+x1 net6 do net2 net1 GND top-1
+V3 net3 GND sin (0 amp 2.45E9)
 .save i(v3)
 R1 net3 net4 300 m=1
-L9 net5 net4 2494n m=1
-C2 net5 GND 0.003675p m=1
-L10 net6 net5 2217.3n m=1
+L9 net5 net4 1011.5n m=1
+C2 net5 GND 0.012205p m=1
+L10 net6 net5 581.8n m=1
 **** begin user architecture code
-
-
-*.TRAN TSTEP TSTOP <TSTART <TMAX>> <UIC>
-
-.control
-save all
-tran 0.02n 40u
-wrdata prelayout_casamento_teste.csv out1
-plot out1
-.endc
-
-
 
 ** opencircuitdesign pdks install
 .lib /foss/pdks/sky130A/libs.tech/ngspice/sky130.lib.spice tt
 
+
+
+
+.PARAM Z = 300
+.PARAM amp = 0.24495
+
+
+.CONTROL
+foreach mydbm -10 -9 -8 -7 -6 -5 -4 -3 -2 -1 0 -1
+  echo amp is $mydbm
+  reset
+  alterparam amp = ((sqrt(2))*(sqrt(Z/1000))*(10**(($mydbm)/20)))
+  save all
+  tran 0.02n 30u
+  meas tran out RMS v(do) from=29.999u to=30u
+end
+
+  wrdata toposense_pos.csv tran1.out tran2.out tran3.out tran4.out tran5.out tran6.out tran7.out
++ tran8.out tran9.out tran10.out tran11.out tran12.out
+
+.ENDC
+
+**** end user architecture code
+
+
+.GLOBAL GND
+.end
 
 **** end user architecture code
 **.ends

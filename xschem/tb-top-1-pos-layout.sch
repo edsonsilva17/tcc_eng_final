@@ -63,6 +63,7 @@ C {devices/code_shown.sym} 2440 -950 0 0 {name=simulation only_toplevel=false va
 .control
 save all
 tran 0.02n 40u
+wrdata poslayout_casamento.csv out1
 plot out1
 .endc
 "}
@@ -95,7 +96,7 @@ device=resistor
 m=1}
 C {top-1-pos-layout.sym} 2920 -1270 0 0 {name=x1}
 C {devices/gnd.sym} 2300 -1140 0 0 {name=l6 lab=GND}
-C {vsource.sym} 2300 -1210 0 0 {name=V3 value="sin (0 1.9 2.45E9)"}
+C {vsource.sym} 2300 -1210 0 0 {name=V3 value="sin (0 0.346 2.45E9)"}
 C {res.sym} 2350 -1290 3 0 {name=R2
 value=300
 footprint=1206
@@ -104,16 +105,16 @@ m=1}
 C {devices/gnd.sym} 2540 -1140 0 0 {name=l8 lab=GND}
 C {ind.sym} 2490 -1290 1 0 {name=L9
 m=1
-value=2923n
+value=1011.5n
 footprint=1206
 device=inductor}
 C {capa.sym} 2540 -1210 0 0 {name=C2
 m=1
-value=0.0023393p
+value=0.012205p
 footprint=1206
 device="ceramic capacitor"}
 C {ind.sym} 2600 -1290 1 0 {name=L10
 m=1
-value=4710n
+value=581.8n
 footprint=1206
 device=inductor}

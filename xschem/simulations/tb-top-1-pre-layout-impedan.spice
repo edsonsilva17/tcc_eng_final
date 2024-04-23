@@ -1,17 +1,15 @@
-** sch_path: /foss/designs/tcc_eng_final/xschem/tb-top-1.sch
-**.subckt tb-top-1
-R2 GND out1 1000k m=1
-I0 net1 GND 0.5u
-V2 net2 GND 1.8
+** sch_path: /foss/designs/tcc_eng_final/xschem/tb-top-1-pre-layout-impedan.sch
+**.subckt tb-top-1-pre-layout-impedan
+I0 net2 GND 0.5u
+V2 net3 GND 1.8
 .save i(v2)
-C1 out1 GND 100p m=1
-x1 net6 out1 net2 net1 GND top-1
-V3 net3 GND sin (0 0.346 2.45E9)
-.save i(v3)
-R1 net3 net4 300 m=1
-L9 net5 net4 2494n m=1
-C2 net5 GND 0.003675p m=1
-L10 net6 net5 2217.3n m=1
+C1 net1 GND 100p m=1
+I1 GND net4 dc 0 ac 1
+vd1 net4 in 0
+.save i(vd1)
+I2 net1 out1 1.8u
+R1 out1 GND 1000k m=1
+x1 in net1 net3 net2 GND top-1
 **** begin user architecture code
 
 
@@ -19,8 +17,11 @@ L10 net6 net5 2217.3n m=1
 
 .control
 save all
-tran 0.02n 40u
-wrdata prelayout_casamento_teste.csv out1
+ac lin 100 2.4e9 2.6e9
+display
+plot real(in)
+plot i(vd1)
+plot imag(in)
 plot out1
 .endc
 

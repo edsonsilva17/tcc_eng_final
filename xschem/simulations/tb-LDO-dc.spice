@@ -1,7 +1,7 @@
 ** sch_path: /foss/designs/tcc_eng_final/xschem/tb-LDO-dc.sch
 **.subckt tb-LDO-dc
 x1 in out net1 ref GND LDO
-I0 net1 GND 5u
+I0 net1 GND 0.5u
 Vref ref GND 0.8
 .save i(vref)
 Vin in GND 0
