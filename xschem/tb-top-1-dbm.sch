@@ -118,7 +118,7 @@ C {code.sym} 2710 -920 0 0 {name=Simulation only_toplevel=false value="
 
 
 .CONTROL
-foreach mydbm -10 -9 -8 -7 -6 -5 -4 -3 -2 -1 0 -1
+foreach mydbm -10 -9 -8 -7 -6 -5 -4 -3 -2 -1 0 1
   echo amp is $mydbm
   reset
   alterparam amp = ((sqrt(2))*(sqrt(Z/1000))*(10**(($mydbm)/20)))

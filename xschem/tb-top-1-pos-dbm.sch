@@ -88,7 +88,6 @@ footprint=1206
 device="ceramic capacitor"}
 C {devices/gnd.sym} 3100 -1090 0 0 {name=l4 lab=GND}
 C {devices/gnd.sym} 2750 -1090 0 0 {name=l5 lab=GND}
-C {top-1.sym} 2920 -1270 0 0 {name=x1}
 C {devices/gnd.sym} 2230 -1160 0 0 {name=l6 lab=GND}
 C {vsource.sym} 2230 -1230 0 0 {name=V3 value="sin (0 amp 2.45E9)"}
 C {res.sym} 2280 -1310 3 0 {name=R1
@@ -114,11 +113,11 @@ footprint=1206
 device=inductor}
 C {code.sym} 2710 -920 0 0 {name=Simulation only_toplevel=false value="
 .PARAM Z = 300
-.PARAM amp = 0.24495
+.PARAM amp = 0.6153
 
 
 .CONTROL
-foreach mydbm -10 -9 -8 -7 -6 -5 -4 -3 -2 -1 0 -1
+foreach mydbm -2 -1 0 1
   echo amp is $mydbm
   reset
   alterparam amp = ((sqrt(2))*(sqrt(Z/1000))*(10**(($mydbm)/20)))
@@ -127,7 +126,7 @@ foreach mydbm -10 -9 -8 -7 -6 -5 -4 -3 -2 -1 0 -1
   meas tran out RMS v(do) from=29.999u to=30u
 end
 
-  wrdata toposensepos.csv tran1.out tran2.out tran3.out tran4.out tran5.out tran6.out tran7.out tran8.out tran9.out tran10.out tran11.out tran12.out 
+  wrdata topopospt3.csv tran1.out tran2.out tran3.out tran4.out
 
 .ENDC
 
@@ -136,3 +135,4 @@ end
 
 .GLOBAL GND
 .end"}
+C {top-1-pos-layout.sym} 2920 -1270 0 0 {name=x1}
